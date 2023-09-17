@@ -1,0 +1,62 @@
+# Папка с заданиями
+Tasks
+# Папка с лекциями
+Lectures
+# Папка сборки
+./MixChat/build
+./build
+# Папка результатов тестов
+./fastlane/test_output
+./fastlane/report.xml
+./report
+# Папка конфигураций
+./Configurations/Config.xcconfig
+
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+# Компилированные файлы
+*.o
+*.pyc
+
+# Файлы настроек CocoaPods
+*.lock
+Pods/
+Podfile.lock
+Manifest.lock
+
+# Символические ссылки
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Кэшированные файлы
+*.xcuserstate
+DerivedData/
+build/
+*.DS_Store
+
+# Файлы библиотек и фреймворков
+*.framework/
+*.xcframework/
+
+# Файлы, которые могут появиться в корне тома
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace

@@ -1,0 +1,87 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  # arr_devices = ["iPhone 8 (16.1)", "iPhone 11 Pro Max"]
+  desc "Сборка приложения без тестирования."
+  lane :custom_build_for_testing do
+    cocoapods
+    scan(
+      # devices: arr_devices,
+      skip_package_dependencies_resolution: true,
+      # skip_detect_devices: true,
+      clean: true,
+      workspace: "MixChat.xcworkspace",
+      scheme: "MixChat",
+      derived_data_path: "build",
+      skip_slack: true,
+      include_simulator_logs: false,
+      build_for_testing: true
+
+    )
+  end
+
+  desc "Запуск UI тестов уже собранного приложения."
+  lane :custom_run_ui_tests do
+    scan(
+      # devices: arr_devices,
+      skip_package_dependencies_resolution: true,
+      # skip_detect_devices: true,
+      clean: false,
+      workspace: "MixChat.xcworkspace",
+      scheme: "MixChat",
+      derived_data_path: "build",
+      skip_slack: true,
+      output_directory: "report",
+      output_types: "html",
+      output_files: "result_ui.html",
+      test_without_building: true,
+      testplan: "UITestPlan"
+    )
+  end
+
+  desc "Запуск Unit тестов уже собранного приложения."
+  lane :custom_run_unit_tests do
+    scan(
+      # devices: arr_devices,
+      skip_package_dependencies_resolution: true,
+      # skip_detect_devices: true,
+      clean: false,
+      workspace: "MixChat.xcworkspace",
+      scheme: "MixChat",
+      derived_data_path: "build",
+      skip_slack: true,
+      output_directory: "report",
+      output_types: "html",
+      output_files: "result_unit.html",
+      test_without_building: true,
+      testplan: "UnitTestPlan"
+    )
+  end
+
+  desc "Запуск UI и Unit."
+  lane :custom_run_tests do
+    custom_run_ui_tests
+    custom_run_unit_tests
+  end
+
+  desc "Последовательный запуск сборки и тестирования."
+  lane :custom_build_and_test do
+    custom_build_for_testing
+    custom_run_tests
+  end
+end

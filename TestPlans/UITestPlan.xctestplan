@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "2FDE6A17-FB86-4709-82B8-74925F46C68E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MixChat.xcodeproj",
+      "identifier" : "2900FCCF29A204470042C55D",
+      "name" : "MixChat"
+    },
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MixChat.xcodeproj",
+        "identifier" : "29908D562A0CD9A800D9F627",
+        "name" : "MixChatUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

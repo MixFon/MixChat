@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "73138270-4267-4C6B-8C4F-F380E80EF729",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MixChat.xcodeproj",
+      "identifier" : "292D06A82A08F0EA0031290F",
+      "name" : "MixChatUnitTests"
+    },
+    "uiTestingScreenshotsLifetime" : "keepNever"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:MixChat.xcodeproj",
+        "identifier" : "292D06A82A08F0EA0031290F",
+        "name" : "MixChatUnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

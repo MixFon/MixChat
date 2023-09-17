@@ -1,0 +1,15 @@
+//
+//  Config.xcconfig
+//  MixChat
+//
+//  Created by Михаил Фокин on 16.05.2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+UNSPLASH_CLIENT_ID_CONFIG = pya4NV3JKkO920CZChTQ5Iacd4AXTeJcVQ1zZ1lRTcg
+
+TFS_HOST_CONFIG = 192.168.1.49
+
+TFS_PORT_CONFIG = 8080

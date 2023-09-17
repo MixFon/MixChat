@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ProfileView" customModule="MixChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONe-vc-Hfh">
+                    <rect key="frame" x="16" y="16" width="288" height="400"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="lBR-Si-Xo6"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-5A-ES2">
+                    <rect key="frame" x="32" y="350" width="256" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="r8d-D1-e5J"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKi-8v-jEy">
+                    <rect key="frame" x="85" y="32" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="Mki-44-ZU9"/>
+                        <constraint firstAttribute="width" constant="150" id="xiX-ec-anO"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-Rr-I7T">
+                    <rect key="frame" x="107.5" y="197" width="105.5" height="34"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Add Photo">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="SFProText-Regular"/>
+                                    <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="pressAddPhoto:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="rld-gt-KNP"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keq-vF-vXP">
+                    <rect key="frame" x="60" y="241" width="200" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="toy-3U-q8u"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPp-AY-LSI">
+                    <rect key="frame" x="32" y="277" width="256" height="20"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="BackgroundPrimary"/>
+            <constraints>
+                <constraint firstItem="keq-vF-vXP" firstAttribute="centerX" secondItem="ONe-vc-Hfh" secondAttribute="centerX" id="1zH-WD-mt1"/>
+                <constraint firstItem="g1b-5A-ES2" firstAttribute="bottom" secondItem="ONe-vc-Hfh" secondAttribute="bottom" constant="-16" id="6cr-Ab-4Fz"/>
+                <constraint firstAttribute="trailing" secondItem="ONe-vc-Hfh" secondAttribute="trailing" constant="16" id="7d5-fO-L2T"/>
+                <constraint firstItem="keq-vF-vXP" firstAttribute="top" secondItem="RUJ-Rr-I7T" secondAttribute="bottom" constant="10" id="FZN-LG-RrN"/>
+                <constraint firstItem="BPp-AY-LSI" firstAttribute="top" secondItem="keq-vF-vXP" secondAttribute="bottom" constant="10" id="JxT-Io-2da"/>
+                <constraint firstItem="BPp-AY-LSI" firstAttribute="centerX" secondItem="ONe-vc-Hfh" secondAttribute="centerX" id="PNd-YI-S5R"/>
+                <constraint firstItem="JKi-8v-jEy" firstAttribute="top" secondItem="ONe-vc-Hfh" secondAttribute="top" constant="16" id="a7F-ot-kRh"/>
+                <constraint firstItem="ONe-vc-Hfh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="aLH-qz-pLu"/>
+                <constraint firstItem="RUJ-Rr-I7T" firstAttribute="top" secondItem="JKi-8v-jEy" secondAttribute="bottom" constant="15" id="d72-ta-2E2"/>
+                <constraint firstItem="BPp-AY-LSI" firstAttribute="trailing" secondItem="ONe-vc-Hfh" secondAttribute="trailing" constant="-16" id="dTz-SR-vGg"/>
+                <constraint firstItem="RUJ-Rr-I7T" firstAttribute="centerX" secondItem="ONe-vc-Hfh" secondAttribute="centerX" id="oAz-x0-iby"/>
+                <constraint firstItem="JKi-8v-jEy" firstAttribute="centerX" secondItem="ONe-vc-Hfh" secondAttribute="centerX" id="qPF-sQ-zRX"/>
+                <constraint firstItem="g1b-5A-ES2" firstAttribute="leading" secondItem="ONe-vc-Hfh" secondAttribute="leading" constant="16" id="tc1-Xa-PgF"/>
+                <constraint firstItem="BPp-AY-LSI" firstAttribute="leading" secondItem="ONe-vc-Hfh" secondAttribute="leading" constant="16" id="uJJ-Tw-iAA"/>
+                <constraint firstItem="g1b-5A-ES2" firstAttribute="trailing" secondItem="ONe-vc-Hfh" secondAttribute="trailing" constant="-16" id="uhs-Cy-xng"/>
+                <constraint firstItem="ONe-vc-Hfh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="uvb-2s-f0w"/>
+            </constraints>
+            <connections>
+                <outlet property="addPhotoButton" destination="RUJ-Rr-I7T" id="Kr1-Sx-K2E"/>
+                <outlet property="boardView" destination="ONe-vc-Hfh" id="cNU-Pf-u79"/>
+                <outlet property="editButton" destination="g1b-5A-ES2" id="HWb-49-2iH"/>
+                <outlet property="userBio" destination="BPp-AY-LSI" id="cSo-Gy-sQU"/>
+                <outlet property="userName" destination="keq-vF-vXP" id="Awi-LS-FZn"/>
+                <outlet property="userPhoto" destination="JKi-8v-jEy" id="uMy-hw-7Ot"/>
+            </connections>
+            <point key="canvasLocation" x="313" y="-81"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
